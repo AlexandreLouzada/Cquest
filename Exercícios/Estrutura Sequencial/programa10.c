@@ -2,7 +2,6 @@
 
 int main(void) {
     int vitorias, derrotas, empates;
-    int pontos_vitorias = 3, pontos_empate = 1, pontos_derrota = 0;
     int total_jogos, pontos_disputados, pontos_ganhos, pontos_perdidos;
 
     // Solicita a quantidade de vitórias, derrotas e empates
@@ -19,10 +18,10 @@ int main(void) {
     total_jogos = vitorias + derrotas + empates;
 
     // Calcula a quantidade total de pontos disputados
-    pontos_disputados = total_jogos * pontos_vitorias;
+    pontos_disputados = total_jogos * 3;
 
     // Calcula a quantidade de pontos ganhos
-    pontos_ganhos = (vitorias * pontos_vitorias) + (empates * pontos_empate);
+    pontos_ganhos = vitorias * 3 + empates;
 
     // Calcula a quantidade de pontos perdidos
     pontos_perdidos = pontos_disputados - pontos_ganhos;

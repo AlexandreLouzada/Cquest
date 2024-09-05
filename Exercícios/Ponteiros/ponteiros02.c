@@ -24,7 +24,6 @@ int main() {
     printf("Idade: %d\n", aluno1->idade);
     printf("Nota: %.2f\n", aluno1->nota);
 
-```c
     // Libera a memória alocada
     free(aluno1);
 

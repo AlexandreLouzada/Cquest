@@ -2,6 +2,7 @@
 
 int main() {
     int x, y;
+    int *a, *b;
 
     // Solicita ao usuário que insira dois números
     printf("Digite o valor de x: ");
@@ -9,14 +10,16 @@ int main() {
 
     printf("Digite o valor de y: ");
     scanf("%d", &y);
+    
+    //Troca os valores 
+    a = &x;
+    b = &y;
 
-    // Troca os valores usando a função
+  	int temp = *a;
+   	*a = *b;
+  	*b = temp;
 
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-
-    printf("Após a troca, x = %d e y = %d\n", x, y);
+    printf("\nApos a troca, x = %d e y = %d\n", x, y);
 
     return 0;
 }

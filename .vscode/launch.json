@@ -21,10 +21,7 @@
         }
       ],
       "preLaunchTask": "Compilar e Executar C",
-      "internalConsoleOptions": "openOnSessionStart",
-      "logging": {
-        "moduleLoad": false
-      }
+      "internalConsoleOptions": "openOnSessionStart"
     }
   ]
 }

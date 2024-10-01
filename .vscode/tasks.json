@@ -1,38 +1,40 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-      {
-          "label": "Compilar C",
-          "type": "shell",
-          "command": "gcc",
-          "args": [
-              "-finput-charset=UTF-8",  // Garante que o GCC interprete o código-fonte como UTF-8
-              "${file}",
-              "-o",
-              "${fileDirname}/output/${fileBasenameNoExtension}.exe"
-          ],
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Compila o programa em C com suporte a UTF-8"
-      },
-      {
-          "label": "Executar Programa",
-          "type": "shell",
-          "command": "start",
-          "args": [
-              "cmd",
-              "/c",
-              "${fileDirname}/output/${fileBasenameNoExtension}.exe & pause"
-          ],
-          "group": {
-              "kind": "test",
-              "isDefault": true
-          },
-          "problemMatcher": [],
-          "detail": "Executa o programa em uma nova janela do terminal"
-      }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar C",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-finput-charset=UTF-8",  // UTF-8 para entrada
+                "${file}",
+                "-o",
+                "${fileDirname}/output/${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compila o programa em C com suporte a UTF-8"
+        },
+        {
+            "label": "Executar Programa",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "start",
+                "${fileDirname}/output/${fileBasenameNoExtension}.exe",
+                "&",
+                "pause"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Executa o programa em uma nova janela do terminal"
+        }
+    ]
 }

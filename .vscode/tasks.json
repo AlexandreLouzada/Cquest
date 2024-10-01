@@ -6,6 +6,7 @@
         "type": "shell",
         "command": "gcc",
         "args": [
+          "-finput-charset=UTF-8",
           "${file}",
           "-o",
           "${fileDirname}/output/${fileBasenameNoExtension}.exe"

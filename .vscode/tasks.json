@@ -1,34 +1,38 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+  "version": "2.0.0",
+  "tasks": [
       {
-        "label": "Compilar e Executar C",
-        "type": "shell",
-        "command": "gcc",
-        "args": [
-          "-finput-charset=UTF-8",
-          "${file}",
-          "-o",
-          "${fileDirname}/output/${fileBasenameNoExtension}.exe"
-        ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        },
-        "problemMatcher": ["$gcc"],
-        "detail": "Compilação e execução do programa em C"
+          "label": "Compilar C",
+          "type": "shell",
+          "command": "gcc",
+          "args": [
+              "-finput-charset=UTF-8",  // Garante que o GCC interprete o código-fonte como UTF-8
+              "${file}",
+              "-o",
+              "${fileDirname}/output/${fileBasenameNoExtension}.exe"
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": ["$gcc"],
+          "detail": "Compila o programa em C com suporte a UTF-8"
       },
       {
-        "label": "Executar o Programa",
-        "type": "shell",
-        "command": "${fileDirname}/output/${fileBasenameNoExtension}.exe",
-        "group": {
-          "kind": "test",
-          "isDefault": true
-        },
-        "problemMatcher": [],
-        "detail": "Execução do programa compilado"
+          "label": "Executar Programa",
+          "type": "shell",
+          "command": "start",
+          "args": [
+              "cmd",
+              "/c",
+              "${fileDirname}/output/${fileBasenameNoExtension}.exe & pause"
+          ],
+          "group": {
+              "kind": "test",
+              "isDefault": true
+          },
+          "problemMatcher": [],
+          "detail": "Executa o programa em uma nova janela do terminal"
       }
-    ]
-  }
-  
+  ]
+}

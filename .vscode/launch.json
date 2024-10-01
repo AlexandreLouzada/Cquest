@@ -5,7 +5,7 @@
       "name": "C/C++: gcc.exe build and debug active file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}/output/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
@@ -20,7 +20,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "build active file",
+      "preLaunchTask": "Compilar e Executar C",
       "internalConsoleOptions": "openOnSessionStart",
       "logging": {
         "moduleLoad": false

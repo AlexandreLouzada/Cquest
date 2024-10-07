@@ -57,6 +57,22 @@
             ],
             "group": "build",
             "detail": "compiler: D:/msys64/mingw64/bin/gcc.exe"
+        },
+        {
+            "label": "Compile C with MSVC",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/EHsc",
+                "${file}",
+                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"],
+            "detail": "Compiling with MSVC"
         }
     ]
 }

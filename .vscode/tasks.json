@@ -4,10 +4,11 @@
         {
             "label": "Compile C with MSVC",
             "type": "shell",
-            "command": "cl.exe",
+            "command": "cmd.exe",
             "args": [
-                "/I", "\"D:\\Program Files `(`x86`)`\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include\"",
-                "/link", "/LIBPATH:\"D:\\Program Files `(`x86`)`\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\lib\\x64\"",
+                "/c", "cl.exe",
+                "/I", "\"D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include\"",
+                "/link", "/LIBPATH:\"D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\lib\\x64\"",
                 "/EHsc",
                 "\"${file}\"",
                 "/Fe:\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
@@ -17,7 +18,7 @@
                 "isDefault": true
             },
             "problemMatcher": ["$msCompile"],
-            "detail": "Compiling with MSVC"
+            "detail": "Compiling with MSVC using cmd.exe"
         }
     ]
 }

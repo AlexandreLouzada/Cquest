@@ -6,10 +6,11 @@
             "type": "shell",
             "command": "cl.exe",
             "args": [
-                "/I", "D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include",  // Caminho para os includes
+                "/I", "\"D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include\"",  // Caminho para os includes
+                "/link", "/LIBPATH:\"D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\lib\\x64\"",  // Caminho para as bibliotecas
                 "/EHsc",
-                "${file}",
-                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "\"${file}\"",
+                "/Fe:\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
             ],
             "group": {
                 "kind": "build",

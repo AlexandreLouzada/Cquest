@@ -6,6 +6,7 @@
             "type": "shell",
             "command": "cl.exe",
             "args": [
+                "/I", "D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include",  // Caminho para os includes
                 "/EHsc",
                 "${file}",
                 "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"

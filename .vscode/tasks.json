@@ -2,63 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compilar C",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-finput-charset=UTF-8",
-                "${file}",
-                "-o",
-                "${fileDirname}/output/${fileBasenameNoExtension}.exe"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Compila o programa em C com suporte a UTF-8"
-        },
-        {
-            "label": "Executar Programa",
-            "type": "shell",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "start",
-                "${fileDirname}/output/${fileBasenameNoExtension}.exe",
-                "&",
-                "pause"
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "problemMatcher": [],
-            "detail": "Executa o programa em uma nova janela do terminal"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "D:/msys64/mingw64/bin/gcc.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "D:/msys64/mingw64/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "compiler: D:/msys64/mingw64/bin/gcc.exe"
-        },
-        {
             "label": "Compile C with MSVC",
             "type": "shell",
             "command": "cl.exe",

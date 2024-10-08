@@ -4,20 +4,18 @@
         {
             "label": "Compile C with MSVC",
             "type": "shell",
-            "command": "cmd.exe",
+            "command": "cl.exe",
             "args": [
-                "/c", "cl.exe",
-                "/I", "\"D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\include\"",
-                "/EHsc",
-                "\"${file}\"",  // Adicione aspas ao redor do arquivo fonte
-                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"  // Formato para o nome do executável
+                "/EHsc",                          // Tratamento de exceções C++
+                "\"${file}\"",                    // Arquivo C atual sendo compilado
+                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"  // Definição do nome do executável
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": true                  // Definir como tarefa padrão para compilação
             },
-            "problemMatcher": ["$msCompile"],
-            "detail": "Compiling with MSVC using cmd.exe"
+            "problemMatcher": ["$msCompile"],     // Matcher de problemas para MSVC
+            "detail": "Compiling with MSVC"
         }
     ]
 }

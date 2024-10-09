@@ -6,15 +6,15 @@
             "type": "shell",
             "command": "cl.exe",
             "args": [
-                "/EHsc",                          // Tratamento de exceções C++
-                "\"${file}\"",                    // Arquivo C atual sendo compilado
-                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"  // Definição do nome do executável
+                "/EHsc", 
+                "\"${file}\"",
+                "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true                  // Definir como tarefa padrão para compilação
+                "isDefault": true
             },
-            "problemMatcher": ["$msCompile"],     // Matcher de problemas para MSVC
+            "problemMatcher": ["$msCompile"],
             "detail": "Compiling with MSVC"
         }
     ]

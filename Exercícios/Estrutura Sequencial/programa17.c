@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <math.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "Portuguese_Brazil");
     float cateto1, cateto2, hipotenusa, area, semiperimetro;
 
     // Solicitar os dados do usuário

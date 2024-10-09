@@ -2,15 +2,15 @@
   "version": "0.2.0",
   "configurations": [
       {
-          "name": "C++ MSVC Launch",
+          "name": "Executar o programa atual",
           "type": "cppvsdbg",
           "request": "launch",
-          "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+          "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
           "args": [],
           "stopAtEntry": false,
-          "cwd": "${workspaceFolder}",
+          "cwd": "${fileDirname}",
           "environment": [],
-          "console": "externalTerminal",
+          "console": "integratedTerminal",
           "preLaunchTask": "Compile C with MSVC"
       }
   ]

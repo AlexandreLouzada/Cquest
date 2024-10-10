@@ -9,6 +9,6 @@ int main() {
     
     strcpy(str2, str1);
     
-    printf("Conteúdo copiado: %s\n", str2);
+    printf("Conteudo copiado: %s\n", str2);
     return 0;
 }

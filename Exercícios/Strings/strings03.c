@@ -13,6 +13,6 @@ int main() {
         i++;
     }
     
-    printf("String em minúsculas: %s\n", str);
+    printf("String em minusculas: %s\n", str);
     return 0;
 }

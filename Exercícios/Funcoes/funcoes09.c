@@ -15,7 +15,7 @@ int main() {
     printf("Digite uma string: ");
     gets(str);
     
-    printf("Digite o caractere a ser substituído: ");
+    printf("Digite o caractere a ser substituido: ");
     scanf("%c", &velho);
     getchar(); // Limpa o buffer
     
@@ -24,7 +24,7 @@ int main() {
     
     substituiChar(str, velho, novo);
     
-    printf("String após substituição: %s\n", str);
+    printf("String apos substituicao: %s\n", str);
     
     return 0;
 }

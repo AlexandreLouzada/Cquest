@@ -10,9 +10,9 @@ int somaArray(int arr[], int tamanho) {
 
 int main() {
     int arr[] = {1, 2, 3, 4, 5};
-    int tamanho = sizeof(arr) / sizeof(arr[0]);
+    int tamanho = sizeof(arr)/ sizeof(arr[0]);
     
-    printf("A soma dos elementos do array é %d\n", somaArray(arr, tamanho));
+    printf("A soma dos elementos do array: %d\n", somaArray(arr, tamanho));
     
     return 0;
 }

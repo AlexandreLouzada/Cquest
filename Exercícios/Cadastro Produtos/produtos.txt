@@ -1,2 +1,4 @@
 100 Teclado 10 250.00
 101 Mouse 20 150.00
+105 Telefone 1 3000.00
+190 impressora 3d 5000 1000.00
